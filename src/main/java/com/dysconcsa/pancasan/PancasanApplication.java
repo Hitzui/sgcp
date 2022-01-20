@@ -1,5 +1,6 @@
 package com.dysconcsa.pancasan;
 
+import com.dysconcsa.pancasan.dao.DataAccess;
 import com.dysconcsa.pancasan.views.AppViewManager;
 import com.gluonhq.charm.glisten.application.AppManager;
 import com.gluonhq.charm.glisten.visual.Swatch;
@@ -20,7 +21,9 @@ public class PancasanApplication extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
+        DataAccess.getInstance();
+        primaryStage.setTitle("Sistema de Gestion Comercial - Taller Pancasan");
         appManager.start(primaryStage);
     }
 
@@ -29,6 +32,11 @@ public class PancasanApplication extends Application {
 
         scene.getStylesheets().add(Objects.requireNonNull(PancasanApplication.class.getResource("style.css")).toExternalForm());
         ((Stage) scene.getWindow()).getIcons().add(new Image(Objects.requireNonNull(PancasanApplication.class.getResourceAsStream("/icon.png"))));
+    }
+
+    @Override
+    public void stop() {
+        javafx.application.Platform.exit();
     }
 
     public static void main(String[] args) {

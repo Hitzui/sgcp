@@ -5,8 +5,22 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.logging.Logger;
 
+
 public class DataAccess {
     Logger logger = Logger.getLogger(getClass().getName());
+
+    private static DataAccess instance;
+
+    private DataAccess() {
+
+    }
+
+    public static DataAccess getInstance() {
+        if (instance == null) {
+            instance = new DataAccess();
+        }
+        return instance;
+    }
 
     public EntityManager entityManager() {
         try {
