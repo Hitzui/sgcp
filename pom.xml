@@ -15,7 +15,7 @@
         <attach.version>4.0.13</attach.version>
         <gluonfx.plugin.version>1.0.11</gluonfx.plugin.version>
         <javafx.plugin.version>0.0.8</javafx.plugin.version>
-        <mainClassName>com.dysconcsa.pancaan.PancasanApplication</mainClassName>
+        <mainClassName>com.dysconcsa.pancasan.PancasanApplication</mainClassName>
     </properties>
 
     <dependencies>
@@ -64,6 +64,17 @@
             <artifactId>util</artifactId>
             <version>${attach.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.4.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>
@@ -103,12 +114,12 @@
                         <list>storage</list>
                     </attachList>
                     <bundlesList>
-                        <list>com.dysconcsa.pancaan.views.primary</list>
-                        <list>com.dysconcsa.pancaan.views.secondary</list>
+                        <list>com.dysconcsa.pancasan.views.primary</list>
+                        <list>com.dysconcsa.pancasan.views.secondary</list>
                     </bundlesList>
                     <reflectionList>
-                        <list>com.dysconcsa.pancaan.views.PrimaryPresenter</list>
-                        <list>com.dysconcsa.pancaan.views.SecondaryPresenter</list>
+                        <list>com.dysconcsa.pancasan.views.PrimaryPresenter</list>
+                        <list>com.dysconcsa.pancasan.views.SecondaryPresenter</list>
                     </reflectionList>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
