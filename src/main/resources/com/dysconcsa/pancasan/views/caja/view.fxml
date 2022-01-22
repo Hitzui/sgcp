@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<View fx:id="viewCaja" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dysconcsa.pancasan.views.caja.ViewPresenter">
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Código:"/>
+                <TextField fx:id="txtCodigo"/>
+                <Label text="Descripción:"/>
+                <TextField fx:id="txtDescripcion"/>
+                <Label text="Ubicación:"/>
+                <TextField fx:id="txtUbicacion"/>
+            </children>
+            <padding>
+                <Insets top="10.0"/>
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="600.0" spacing="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleAceptar" text="Aceptar"/>
+                <Button mnemonicParsing="false" onAction="#handleCancelar" text="Cancelar"/>
+            </children>
+        </HBox>
+    </bottom>
+</View>

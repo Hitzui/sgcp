@@ -1,5 +1,6 @@
 package com.dysconcsa.pancasan.views;
 
+import com.dysconcsa.pancasan.dao.DaoRubro;
 import com.dysconcsa.pancasan.dao.DataAccess;
 import com.gluonhq.charm.glisten.application.AppManager;
 import com.gluonhq.charm.glisten.control.AppBar;
@@ -8,6 +9,8 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+
+import javax.inject.Inject;
 
 public class PrimaryPresenter {
 
